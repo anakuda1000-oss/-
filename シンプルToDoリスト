@@ -1,0 +1,21 @@
+print("To Do リストの作成")
+to_do_list=[]
+def To_Do():
+    Do=input("すべきことを入力してください")
+    to_do_list.append(Do)
+    print(to_do_list)
+    return to_do_list
+
+error=False
+Input=input("[開始: y, 終了: n]>>")
+if Input=="y":
+    while True:
+        To_Do()
+        option=int(input("[続ける: 1, 終了:　2]>>"))
+        if option==2:
+            print("終了")
+            error=True
+            break
+        print()
+elif Input=="n":
+    print("終了")
