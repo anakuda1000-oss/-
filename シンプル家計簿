@@ -1,0 +1,27 @@
+print("ｙで起動します、ｎで終了します")
+num=input("yかnを入力して下さい")
+balance=0
+error=False
+if num=="y":
+    while True:
+        option=int(input("1: 収入,2: 支出,3: 残高,4: 終了>"))
+        if option==1 or option==2 or option==3 or option==4:
+            if option==1:
+                income=int(input("収入を入力してください"))
+                balance+=income
+                print(f"収入追加後の残高：{balance}")
+            elif option==2:
+                expense=int(input("支出を入力してください"))
+                balance-=expense
+                print(f"支出差し引き後の残高：{balance}")
+            elif option==3:
+                print(f"残高：{balance}")
+            elif option==4:
+                print("終了します")
+                error=True
+                break
+        else:
+            print("指定した数を入れてください（１～４）")
+        print()
+elif num=="n":
+    print("終了")
